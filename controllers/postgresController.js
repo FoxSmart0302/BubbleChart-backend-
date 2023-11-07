@@ -2,11 +2,11 @@ const { postgresConfig } = require("../config");
 
 const Pool = require("pg").Pool;
 const pool = new Pool({
-  user: "readonly_user",
-  host: "164.90.220.117",
-  database: "postgres",
-  password: "fdffae64fec14135dc44885",
-  port: 5432,
+  user: postgresConfig.user,
+  host: postgresConfig.database,
+  database: postgresConfig.database,
+  password: postgresConfig.password,
+  port: postgresConfig.port,
 });
 
 exports.getBubbles = (request, response) => {
